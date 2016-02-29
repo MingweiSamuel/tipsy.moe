@@ -25,7 +25,7 @@ html {
   <body>
     <script>
       var bg = getComputedStyle(document.documentElement).backgroundImage;
-      document.documentElement.style.backgroundImage = 'none';
+      document.documentElement.style.backgroundImage = 'linear-gradient(#000, #000), ' + bg;
       function playing() {
         setTimeout(function() {
           document.documentElement.style.backgroundImage = bg;
