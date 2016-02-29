@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
-body {
+html {
   background-color: #000;
   background-image: url(tipsy.gif);
   background-repeat: no-repeat;
@@ -22,11 +22,11 @@ body {
   </head>
   <body>
     <script>
-      var bg = getComputedStyle(document.body).backgroundImage;
-      document.body.style.backgroundImage = 'none';
+      var bg = getComputedStyle(document.documentElement).backgroundImage;
+      document.documentElement.style.backgroundImage = 'none';
       function playing() {
         setTimeout(function() {
-          document.body.style.backgroundImage = bg;
+          document.documentElement.style.backgroundImage = bg;
         }, 6600);
       }
     </script>
