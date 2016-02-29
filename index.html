@@ -25,7 +25,6 @@ a {
   position: fixed;
   top: 0.5em;
   right: 0.5em;
-  visibility: hidden;
   
   text-decoration: inherit;
   font-style: inherit;
@@ -40,7 +39,6 @@ document.documentElement.style.backgroundImage = 'linear-gradient(#000, #000), '
 function playing() {
   setTimeout(function() {
     document.documentElement.style.backgroundImage = bg;
-    document.getElementsByTagName('a')[0].style.visibility = 'visible';
   }, 6500);
 }
     </script>
