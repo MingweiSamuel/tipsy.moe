@@ -20,18 +20,33 @@ html {
   -o-background-size: contain;
   background-size: contain;
 }
+
+a {
+  position: fixed;
+  top: 0.5em;
+  right: 0.5sem;
+  visibility: hidden;
+  
+  text-decoration: inherit;
+  font-style: inherit;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 2.5em;
+  color: #DDD;
+}
     </style>
     <script>
-      var bg = getComputedStyle(document.documentElement).backgroundImage;
-      document.documentElement.style.backgroundImage = 'linear-gradient(#000, #000), ' + bg;
-      function playing() {
-        setTimeout(function() {
-          document.documentElement.style.backgroundImage = bg;
-        }, 6500);
-      }
+var bg = getComputedStyle(document.documentElement).backgroundImage;
+document.documentElement.style.backgroundImage = 'linear-gradient(#000, #000), ' + bg;
+function playing() {
+  setTimeout(function() {
+    document.documentElement.style.backgroundImage = bg;
+    document.getElementsByTagName('a')[0].style.visibility = 'visible';
+  }, 6500);
+}
     </script>
   </head>
   <body>
+    <a href="https://www.youtube.com/watch?v=KWKYpy__lfA">tipsy.moe</a>
     <audio autoplay="" loop="" preload="" onplaying="playing();">
       <source src="tipsy.mp3" type="audio/mpeg"></source>
       Your browser is bad and you should feel bad.
