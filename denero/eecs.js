@@ -1,4 +1,4 @@
-//eecs.js shameless stolen from eecseecs.com/eecs.js
+//eecs.js shamelessly stolen from eecseecs.com/eecs.js
 var introAudio = new Audio('intro.mp3');
 var loopAudio = new Audio('loop.mp3');
 
