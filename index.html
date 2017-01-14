@@ -14,7 +14,7 @@ html {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  
+
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -25,7 +25,7 @@ a {
   position: fixed;
   top: 0.5em;
   right: 0.5em;
-  
+
   text-decoration: inherit;
   font-style: inherit;
   font-family: Tahoma, Geneva, sans-serif;
@@ -33,13 +33,22 @@ a {
   color: #DDD;
 }
     </style>
-    <script>
+    <script type="text/javascript">
+var delayMs = 6500;
 var bg = getComputedStyle(document.documentElement).backgroundImage;
 document.documentElement.style.backgroundImage = 'linear-gradient(#000, #000), ' + bg;
+var intervalId = setInterval(function() {
+  var aud = document.getElementsByTagName('audio')[0]
+  if (aud && aud.currentTime >= delayMs / 1000) {
+    document.documentElement.style.backgroundImage = bg;
+    clearInterval(intervalId);
+  }
+}, 100);
 function playing() {
   setTimeout(function() {
     document.documentElement.style.backgroundImage = bg;
-  }, 6500);
+    clearInterval(intervalId);
+  }, delayMs);
 }
     </script>
   </head>
