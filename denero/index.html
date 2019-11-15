@@ -16,12 +16,20 @@ a {
   position: fixed;
   top: 0.5em;
   right: 0.5em;
-  
   text-decoration: inherit;
   font-style: inherit;
   font-family: Tahoma, Geneva, sans-serif;
   font-size: 2.5em;
   color: #DDD;
+}
+
+#clickme {
+  position: fixed;
+  top: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3em;
+  color: #eeecc5;
 }
 
 video {
@@ -32,9 +40,13 @@ video {
   <script type="text/javascript" src="eecs.js"></script>
   </head>
   <body>
-    <video autoplay="" loop="" preload="">
+    <div id="clickme">
+	    <tt>click to begin</tt>
+    </div>
+    <video autoplay loop preload id="dance">
       <source src="dance.webm" type="video/webm"></source>
-      DeNero is displeased.
+      Your browser is bad and DeNero is displeased.
     </video>
+    <a href="https://www.youtube.com/watch?v=RD62HmxsZ70">denero</a>
   </body>
 </html>
